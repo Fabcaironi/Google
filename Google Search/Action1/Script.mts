@@ -27,7 +27,7 @@ If DataTable.Value ("p_execute", "Casos") = "Y" Then
 	Browser("Google").Page("Google").WebButton("Buscar con Google").Click @@ hightlight id_;_Browser("Google").Page("Google").WebButton("Buscar con Google")_;_script infofile_;_ZIP::ssf2.xml_;_
 	
 	If Browser("opentitle:=Google").Page("title:=.*").WebElement("html id:=resultStats").Exist(3) Then
-		Reporter.ReportEvent micPass, "Search on google", "the search was correctly made"
+		Reporter.ReportEvent micPass, "Search on google", "the search was correctly made, yay"
 		Browser("opentitle:=Google").Page("title:=.*").Image("alt:=Google").Click
 		ExitActionIteration
 	Else
