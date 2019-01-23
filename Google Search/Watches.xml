@@ -1,0 +1,4 @@
+﻿<Properties>
+  <WatchEntry0 value="Datatable.GetSheet(&quot;Casos&quot;).GetCurrentRow" />
+  <WatchEntry1 value="Datatable.GetSheet(&quot;Casos&quot;).GetCurrentRow" />
+</Properties>
