@@ -29,15 +29,15 @@ If DataTable.Value ("p_execute", "Casos") = "Y" Then
 	If Browser("opentitle:=Google").Page("title:=.*").WebElement("html id:=resultStats").Exist(3) Then
 		Reporter.ReportEvent micPass, "Search on google", "the search was correctly made, yay"
 		Browser("opentitle:=Google").Page("title:=.*").Image("alt:=Google").Click
-		ExitActionIteration
 	Else
 		Reporter.ReportEvent micFail, "Search on google", "There was an error during the search"
 		Browser("opentitle:=Google").Page("title:=.*").Image("alt:=Google").Click
-		ExitActionIteration
 	End  If
 	
 	If DataTable.Value("p_search_data","Search Data") = "Krakow" Then
 		Reporter.ReportEvent micFail, "Search on google", "Krakow must fail"
 		ExitTest
 	End If
+	
+	ExitActionIteration
 End  If
