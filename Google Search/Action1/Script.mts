@@ -34,10 +34,10 @@ If DataTable.Value ("p_execute", "Casos") = "Y" Then
 		Browser("opentitle:=Google").Page("title:=.*").Image("alt:=Google").Click
 	End  If
 	
-	If DataTable.Value("p_search_data","Search Data") = "Krakow" Then
-		Reporter.ReportEvent micFail, "Search on google", "Krakow must fail"
-		ExitTest
-	End If
+'	If DataTable.Value("p_search_data","Search Data") = "Krakow" Then
+'		Reporter.ReportEvent micFail, "Search on google", "Krakow must fail"
+'		ExitTest
+'	End If
 	
 	ExitActionIteration
 End  If
