@@ -22,12 +22,7 @@ If DataTable.Value ("p_execute", "Casos") = "Y" Then
 	
 	'--------------------Search something---------------------
 	
-	If DataTable.Value("p_search_data","Search Data") = "Krakow" Then
-		Reporter.ReportEvent micFail, "Search on google", "Krakow must fail"
-		ExitTest
-	End If
-	
-	
+
 	Browser("Google").Page("Google").WebEdit("Buscar").Set DataTable.Value("p_search_data","Search Data") @@ hightlight id_;_Browser("Google").Page("Google").WebEdit("Buscar")_;_script infofile_;_ZIP::ssf1.xml_;_
 	Browser("Google").Page("Google").WebButton("Buscar con Google").Click @@ hightlight id_;_Browser("Google").Page("Google").WebButton("Buscar con Google")_;_script infofile_;_ZIP::ssf2.xml_;_
 	
@@ -40,4 +35,9 @@ If DataTable.Value ("p_execute", "Casos") = "Y" Then
 		Browser("opentitle:=Google").Page("title:=.*").Image("alt:=Google").Click
 		ExitActionIteration
 	End  If
+	
+	If DataTable.Value("p_search_data","Search Data") = "Krakow" Then
+		Reporter.ReportEvent micFail, "Search on google", "Krakow must fail"
+		ExitTest
+	End If
 End  If
